@@ -76,3 +76,6 @@ function twoSumByHashTable(nums, target) {
     return false
 };
 ```
+
+[回到首頁](../../README.md)
+[程式碼參考](scripts/index.js)
