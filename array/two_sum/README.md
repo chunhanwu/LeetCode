@@ -56,10 +56,10 @@ HashTable：
 function twoSumByHashTable(nums, target) {
     let hash = {};
     for (let i = 0; i < nums.length; i++) {
-        if (hash[nums[i]] != undefined) {
-            return [hash[nums[i]], i];
+        if (target - nums[i] in hash) {
+            return [hash[target - nums[i]], i];
         } else {
-            hash[target - nums[i]] = i;
+            hash[nums[i]] = i;
         }
     }
     return false
