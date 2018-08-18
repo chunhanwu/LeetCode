@@ -28,9 +28,7 @@ Note:
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2<sup>31</sup>,  2<sup>31</sup> − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 ## 翻譯
 
-給一個整數的陣列，陣列中會有兩個元素加起來等於target，回傳這兩個元素的位置。
-
-你可以假設一定會有解，而且相同的元素不可使用兩次。
+迴轉一整數，若溢位0回傳即可。  
 
 ## 思路
 
