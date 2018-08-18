@@ -21,11 +21,11 @@ return [0, 1].
 
 ## 思路
 
-硬解法:
+硬解法:  
 使用雙迴圈，尋找nums[i]+nums[j] = target 回傳i,j。
 
-HashTable：
-明顯硬解法時間複雜度是O(n^2)，使用HashTable去紀錄(利用物件的key)，即可在一個迴圈內找到。
+HashTable:  
+明顯硬解法時間複雜度是O(n^2)，使用HashTable去紀錄(利用物件的key)，即可在一個迴圈內找到。  
 做法是，當迴圈跑到nums[i]時，如果 target-nums[i]還不在 Hash Table中，那就儲存{nums[i]:i}
 
 Example:
