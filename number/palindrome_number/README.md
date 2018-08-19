@@ -1,41 +1,42 @@
-# LeetCode 7. Reverse Integer
+# LeetCode 9. Palindrome Number
 
 ## 題目
-Given a 32-bit signed integer, reverse digits of an integer.
+Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 Example 1 :
 ```
-Input: 123
-Output: 321
+Input: 121
+Output: true
 ```
 
 Example 2 :
 ```
-Input: -123
-Output: -321
+Input: -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 ```
 
 Example 3 :
 ```
-Input: 120
-Output: 21
+Input: 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ```
 
-Note:
-Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2<sup>31</sup>,  2<sup>31</sup> − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+Coud you solve it without converting the integer to a string?
 ## 翻譯
 
-回轉一整數，若溢位回傳0即可。  
+判斷一個整數是否是自己的迴文數，不能使用數字轉字串。 
 
 ## 思路
 
-一般想法分為Number解與String解，以下分別介紹  
+第一個想法或許是字串反轉然後檢查字串是否是回文數，但題目有限制住不可使用。  
 
-Number:  
-毫無疑問，第一想法為用while不斷除10，這邊要注意的是溢位問題，這邊利用一個很不錯的技巧，在即將溢位時判斷最後一個數字大小，詳細如程式碼所述
+而若直接判斷數字本身會有整數溢位問題，如LeetCode 7所示，而為了避免溢位，我判斷一半的數字，畢竟數字如果是迴文數，前半段與後半段會相同。  
+舉例來說輸入`1331`，後面的數字`31`反轉後是`13`，這與前半段的數字相同，可以知道此為迴文數。  
+而在實作時想必會碰到一個問題，我如何得知已經「前半段」、「後半段」呢？  
+我這邊用的想法是：若反轉後的數字>剩下的數字，即表示過了「邊線」，表示已經處理一半的數字了。
 
-String:  
-也可以將數字轉為字串，後反轉，這邊要注意的是負數的情況，需要另外去處理，這邊我利用``Math.sign``去處理，另外關於溢位的問題，我認為在溢位時去判斷是否大於最大值是一種不太恰當的方法(大於溢位值還拿來做判斷?)，而且這其實是數字的問題，使用string，會多使用額外空間。
 
 ## 解題
 
@@ -44,7 +45,7 @@ Number:
 const maxVaule = 2 ** 31 - 1;  // 2147483647
 const minVaule = -1 * 2 ** 31; //-2147483648
 
-function reverseByMath(num) {
+function isPalindrome (num) {
     let res = 0
     while (num !== 0) {
         let pop = num % 10;

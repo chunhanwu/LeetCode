@@ -4,3 +4,4 @@
 
 數學Number
 * [LeetCode 7. Reverse Integer](number/reverse_integer/README.md)  
+* [LeetCode 9. Palindrome Number](number/palindrome_number/README.md)   
