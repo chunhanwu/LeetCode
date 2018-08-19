@@ -80,12 +80,12 @@ num.split('') // ["1","2","3"]
 arrayObject.reverse() : 將陣列回轉
 ```
 let array = ["1","2","3"]
-array.reverse(') // ["3","2","1"]
+array.reverse() // ["3","2","1"]
 ```
 arrayObject.join('') : 將陣列重組
 ```
 let array = ["3","2","1"]
-array.join(') // "321"
+array.join('') // "321"
 ```
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
