@@ -1,31 +1,19 @@
 
-let testNum = 120;
-const maxVaule = 2 ** 31 - 1;  // 2147483647
-const minVaule = -1 * 2 ** 31; //-2147483648
+let testNum = -131;
 
-//math
-function reverseByMath(num) {
-    let res = 0
-    while (num !== 0) {
-        let pop = num % 10;
-        num = parseInt(num / 10);
-        if (res > parseInt(maxVaule / 10) || (res === parseInt(maxVaule / 10) && pop > 7)) {
-            return 0
-        }
-        if (res < parseInt(minVaule / 10) || (res === parseInt(minVaule / 10) && pop < -8)) {
-            return 0
-        }
-        // return (res < MIN_VALUE || res > MAX_VALUE) ? 0 : res;
-        res = res * 10 + pop;
+function isPalindrome(num) {
+    if (num < 0 || (num % 10 === 0 && num !== 0)) {
+        return false;
     }
-    return res;
+    let rev = 0;
+    while (num > rev) {
+        rev = rev * 10 + num % 10;
+        num = parseInt(num / 10)
+    }
+    return num === rev || num === parseInt(rev / 10);
+    // num === parseInt(rev / 10)
+    // 是指長度為奇數時，特別做處理
 };
 
-//String
-function reverseByString(num) {
-    let reversedInt = (+String(Math.abs(num)).split('').reverse().join('')) * Math.sign(num);
-    return (reversedInt < minVaule || reversedInt > maxVaule) ? 0 : reversedInt
-};
 console.warn('testNum', testNum)
-console.warn('reverseByMath(testNum)', reverseByMath(testNum))
-console.warn('reverseByString(testNum)', reverseByString(testNum))
+console.warn('isPalindrome(testNum)', isPalindrome(testNum))
