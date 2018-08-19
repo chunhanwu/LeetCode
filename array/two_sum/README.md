@@ -22,7 +22,7 @@ return [0, 1].
 ## 思路
 
 硬解法:  
-使用雙迴圈，尋找nums[i]+nums[j] = target 回傳i,j。
+使用雙迴圈，在nums[i]時尋找nums[j] = target-nums[i] 回傳i,j。
 
 HashTable:  
 明顯硬解法時間複雜度是O(n^2)，使用HashTable去紀錄(利用物件的key)，即可在一個迴圈內找到。  
@@ -56,7 +56,7 @@ HashTable：
 function twoSumByHashTable(nums, target) {
     let hash = {};
     for (let i = 0; i < nums.length; i++) {
-        if (target - nums[i] in hash) {
+        if (hash[target - nums[i]] !== undefined) {
             return [hash[target - nums[i]], i];
         } else {
             hash[nums[i]] = i;

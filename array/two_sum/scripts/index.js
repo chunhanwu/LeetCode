@@ -15,7 +15,7 @@ function twoSumByBruteForce(nums, target) {
 function twoSumByHashTable(nums, target) {
     let hash = {};
     for (let i = 0; i < nums.length; i++) {
-        if (target - nums[i] in hash) {
+        if (hash[target - nums[i]] !== undefined) {
             return [hash[target - nums[i]], i];
         } else {
             hash[nums[i]] = i;
