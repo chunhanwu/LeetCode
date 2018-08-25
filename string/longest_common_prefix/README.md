@@ -24,6 +24,8 @@ All given inputs are in lowercase letters `a-z`.
 
 一個陣列中有許多個字串，找出這些字串最長的共同字首，若沒有，則回傳空白字串。
 
+注意：所以輸入都是小寫  
+
 ## 思路
 
 ## 解題
