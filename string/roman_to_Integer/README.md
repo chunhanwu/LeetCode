@@ -39,11 +39,6 @@ Output: 9
 ```
 Example 4:
 ```
-Output: 58
-Explanation: C = 100, L = 50, XXX = 30 and III = 3.
-```
-Example 5:
-```
 Input: "MCMXCIV"
 Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
@@ -72,8 +67,34 @@ M             1000
 給一羅馬數字，轉為整數，這個數字一定落在1 到 3999 之間。　　
 
 ## 思路
+建立一個轉換表來對應羅馬符號跟數字的關係，一般情況下(ex. II, XI)，可以直接轉換。　　
+只有特殊裝狀況要另外處理，這種組合的特色是後面的符號會大於前面的符號，因此一次讀兩個羅馬符號來找出這種組合。 一次讀兩個羅馬數字，如果第二個數字(n2)比第一個(n1)大，整數值為n2-n1，如果是一般的情況n2 <= n1，整數值為n2+n1。
 
 ## 解題
-
+```
+function romanToInt(s) {
+    let map = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+    let result = 0;
+    for (let i=0;i<s.length;i++){
+        let current = map[s[i]]
+        let next = map[s[i+1]]
+        if (next > current){
+            result += next - current;
+            i++; 
+        } else {
+            result += current;
+        }
+    }
+    return result;
+};
+```
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)

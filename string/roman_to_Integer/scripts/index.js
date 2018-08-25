@@ -1,30 +1,34 @@
-let testNum = 120;
-const maxVaule = 2 ** 31 - 1;  // 2147483647
-const minVaule = -1 * 2 ** 31; //-2147483648
+/**
+ * @param {string} s
+ * @return {number}
+ */
 
-//math
-function reverseByMath(num) {
-    let res = 0
-    while (num !== 0) {
-        let pop = num % 10;
-        num = parseInt(num / 10);
-        if (res > parseInt(maxVaule / 10) || (res === parseInt(maxVaule / 10) && pop > 7)) {
-            return 0
+let testString = 'MCMXCIV';
+
+function romanToInt(s) {
+    let map = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+    let result = 0;
+    for (let i=0;i<s.length;i++){
+        let current = map[s[i]]
+        let next = map[s[i+1]]
+        if (next > current){
+            result += next - current;
+            i++; 
+        } else {
+            result += current;
         }
-        if (res < parseInt(minVaule / 10) || (res === parseInt(minVaule / 10) && pop < -8)) {
-            return 0
-        }
-        // return (res < MIN_VALUE || res > MAX_VALUE) ? 0 : res;
-        res = res * 10 + pop;
     }
-    return res;
+    return result;
 };
 
-//String
-function reverseByString(num) {
-    let reversedInt = (+String(Math.abs(num)).split('').reverse().join('')) * Math.sign(num);
-    return (reversedInt < minVaule || reversedInt > maxVaule) ? 0 : reversedInt
-};
-console.warn('testNum', testNum)
-console.warn('reverseByMath(testNum)', reverseByMath(testNum))
-console.warn('reverseByString(testNum)', reverseByString(testNum))
+
+console.warn('input', testString);
+console.warn('output', romanToInt(testString));
