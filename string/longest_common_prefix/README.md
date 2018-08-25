@@ -1,4 +1,4 @@
-#LeetCode 14. Longest Common Prefix
+# LeetCode 14. Longest Common Prefix
 
 ## 題目
 
