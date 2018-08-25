@@ -8,3 +8,4 @@
 
 字串String
 * [LeetCode 13. Roman to Integer](string/roman_to_Integer/README.md)
+* [LeetCode 14. Longest Common Prefix](string/longest_common_prefix/README.md)
