@@ -27,9 +27,33 @@ All given inputs are in lowercase letters `a-z`.
 注意：所以輸入都是小寫。  
 
 ## 思路
-
+選擇一字串逐一比對，這裡選擇使用str.every()，直到出現false(表示不再有共同字首)，則回傳該值
+```
+[12, 5, 8, 130, 44].every(x => x >= 10); // false
+[12, 54, 18, 130, 44].every(x => x >= 10); // true
+```
 ## 解題
 ```
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+let input = ["flower", "flow", "flight"];
+function longestCommonPrefix(strs) {
+    if (!strs.length && strs === undefined) return ''
+    let prefix = ''
+    let potential = ''
+
+    for (let char of strs[0]) {
+        potential += char
+        if (strs.every(str => str.substring(0, potential.length) === potential)) {
+            prefix = potential
+        } else {
+            break
+        }
+    }
+    return prefix
+};
 ```
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
