@@ -11,5 +11,5 @@
 * [LeetCode 14. Longest Common Prefix](string/longest_common_prefix/README.md)
 * [LeetCode 20. Valid Parentheses](string/valid_parentheses/README.md)
 
-鍊結串列Linked List
+連結串列Linked List
 * [LeetCode 21. Merge Two Sorted Lists](linked_list/merge_two_sorted_lists/README.md)
