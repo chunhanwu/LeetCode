@@ -23,48 +23,19 @@ It doesn't matter what you leave beyond the returned length.
 
 ## 思路
 
-硬解法:  
-使用雙迴圈，在nums[i]時尋找nums[j] = target-nums[i] 回傳i,j。
-
-HashTable:  
-明顯硬解法時間複雜度是O(n^2)，使用HashTable去紀錄(利用物件的key)，即可在一個迴圈內找到。  
-做法是，當迴圈跑到nums[i]時，如果 target-nums[i]還不在 Hash Table中，那就儲存{nums[i]:i}
-
-Example:
-```
-Given nums = [2, 7, 11, 15], target = 9,
-
-如果我在跑到 2 的時候就先儲存 hash{2:0}，跑到7時，因為hash已經有9-7這個key，故可直接得到[0, 1]
-```
+使用count紀錄不重複元素，當陣列中下一個元素與當前的元素重複，就跳過當前的元素，不重複就放在陣列中。
 
 ## 解題
-
-硬解法:
 ```
-function twoSumByBruteForce(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] === target - nums[j]) {
-                return [i, j];
-            }
+function removeDuplicates(nums) {
+    if (nums.length === 0) return 0;
+    let count = 0;
+    for (let i in nums) {
+        if (nums[count] !== nums[i]) {
+            nums[++count] = nums[i];
         }
     }
-    return false
-};
-```
-
-HashTable：
-```
-function twoSumByHashTable(nums, target) {
-    let hash = {};
-    for (let i = 0; i < nums.length; i++) {
-        if (hash[target - nums[i]] !== undefined) {
-            return [hash[target - nums[i]], i];
-        } else {
-            hash[nums[i]] = i;
-        }
-    }
-    return false
+    return ++count;
 };
 ```
 
