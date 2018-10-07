@@ -5,13 +5,26 @@
  */
 
 function strStr(haystack, needle) {
-    console.warn('haystack', haystack);
-    console.warn('needle', needle);
-    return 0;
+    if (!needle) {
+        return 0
+    }
+    let haystackLength = haystack.length
+    let needleLength = needle.length
+    if (!haystack || haystackLength < needleLength) {
+        return -1
+    }
+
+    for (let i = 0; i < haystackLength - needleLength + 1; i++) {
+        let str = haystack.substr(i, needleLength)
+        if (str === needle) {
+            return i
+        }
+    }
+    return -1;
 };
 
 let input_haystack = 'hello';
-let input_needle = 'll'
-console.warn('input_nums', input_nums);
-console.warn('input_val', input_val);
+let input_needle = 'lo'
+console.warn('input_haystac', input_haystack);
+console.warn('input_needle', input_needle);
 console.warn('output', strStr(input_haystack, input_needle))
