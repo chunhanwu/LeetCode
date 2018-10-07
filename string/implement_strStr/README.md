@@ -17,7 +17,8 @@ Output: -1
 ```
 ## 翻譯
 
-實現strStr() (在c中是strStr(), js則是indeOf())
+實現strStr() (在c中是strstr(), js則是indeOf())  
+
 給一個指針(needle)與一個堆疊(haystack)，回傳needle第一次在haystack出現的位，若沒有則回傳-1。
 
 ## 思路
