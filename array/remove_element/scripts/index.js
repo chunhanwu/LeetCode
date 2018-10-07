@@ -5,8 +5,15 @@
  */
 
 function removeElement(nums, val) {
-    console.warn('nums', nums);
-    console.warn('val', val);
+    let count = 0;
+    for (let i in nums) {
+        if (nums[i] !== val) {
+            nums[count++] = nums[i];
+            // 等效於
+            // nums[count] = nums[i];
+            // count++;
+        }
+    }
     return 0;
 };
 

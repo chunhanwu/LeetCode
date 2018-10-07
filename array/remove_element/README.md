@@ -39,15 +39,17 @@ It doesn't matter what values are set beyond the returned length.
 
 ## 解題
 ```
-function removeDuplicates(nums) {
-    if (nums.length === 0) return 0;
+function removeElement(nums, val) {
     let count = 0;
     for (let i in nums) {
-        if (nums[count] !== nums[i]) {
-            nums[++count] = nums[i];
+        if (nums[i] !== val) {
+            nums[count++] = nums[i];
+            // 等效於
+            // nums[count] = nums[i];
+            // count++;
         }
     }
-    return ++count;
+    return 0;
 };
 ```
 
