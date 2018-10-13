@@ -37,7 +37,19 @@ Output: 0
 
 ## 思路
 
-## 解題
+先判斷target是否大於最後一個值(最大值)，如果大於則直接回傳位置，若無則很簡單的判斷target在陣列中小於哪個值，回傳其位置即可。
 
+## 解題
+```
+function searchInsert(nums, target) {
+    if (target>nums[nums.length-1]) 
+    return nums.length
+
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]>=target) 
+        return i
+    }
+};
+```
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
