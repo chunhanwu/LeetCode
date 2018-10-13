@@ -2,7 +2,7 @@
 陣列Array
 * [LeetCode 1. Two Sum](array/two_sum/README.md)  
 * [LeetCode 26. Remove Duplicates from Sorted Array](array/remove_duplicates_from_sorted_array) 
-* [LeetCode 27. Remove Element](array/remove_element)
+* [LeetCode 27. Remove Element](array/remove_element)  
 * [LeetCode 35. Search Insert Position](array/search_insert _position)
 
 數學Number
