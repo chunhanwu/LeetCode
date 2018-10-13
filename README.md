@@ -3,8 +3,8 @@
 * [LeetCode 1. Two Sum](array/two_sum/README.md)  
 * [LeetCode 26. Remove Duplicates from Sorted Array](array/remove_duplicates_from_sorted_array) 
 * [LeetCode 27. Remove Element](array/remove_element/README.md)  
-* [LeetCode 35. Search Insert Position](array/search_insert_position/README.md)
-search_insert _position
+* [LeetCode 35. Search Insert Position](array/search_insert_position/README.md)  
+
 數學Number
 * [LeetCode 7. Reverse Integer](number/reverse_integer/README.md)  
 * [LeetCode 9. Palindrome Number](number/palindrome_number/README.md)   
