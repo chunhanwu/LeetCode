@@ -28,10 +28,37 @@ Note: Each term of the sequence of integers will be represented as a string.
 ```
 
 ## 思路
+首先先判斷字串例如`1211`得到`111221`，我定義一個資料結構(stack)去紀錄值(value)與次數(count)，若是出現不同的數字，則重新數。
 
+另外利用遞迴(Recursive)來處理次數，遞迴需要注意的是中止條件(本題為例則是定義`n=1`)。
 
 ## 解題
 ```
+/**
+ * @param {number} n
+ * @return {string}
+ */
+
+
+function countAndSay(n) {
+    if (n === 0) return '';
+    if (n === 1) return '1';
+    let inStr = countAndSay(n - 1);
+    let outStr = '';
+    let stack = {
+            value : inStr[0],
+            count : 1 };
+    for (let i = 1; i <= inStr.length; i++) {
+        if (inStr[i] === stack.value) {
+            stack.count += 1;
+        } else {
+            outStr += stack.count + stack.value;
+            stack.count = 1;
+            stack.value = inStr[i];
+        }
+    }
+    return outStr;
+};
 ```
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
