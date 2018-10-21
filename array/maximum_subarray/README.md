@@ -19,8 +19,9 @@ If you have figured out the O(n) solution, try coding another solution using the
 如果寫好複雜度為O(n)的解了，試著用divide and conquer寫寫看。
 
 ## 思路
-最簡單的想法就是[0] ~ [0]、[0] ~ [1] ... [0] ~ [N] ... [N] ~ [N]全部計算一下就可以了，在此不另行撰寫我。  
-這邊利用判斷總和是否為0來比較結果，時間複雜度為O(n)。
+最簡單的想法就是[0] ~ [0]、[0] ~ [1] ... [0] ~ [N] ... [N] ~ [N]全部計算一下就可以了，在此不另行撰寫。  
+
+這邊利用判斷總和(sum)是否大於0來與結果比較，時間複雜度為O(n)。
 ## 解題
 ```
 function maxSubArray(nums) {
