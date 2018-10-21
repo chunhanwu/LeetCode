@@ -24,6 +24,10 @@ If you have figured out the O(n) solution, try coding another solution using the
 這邊利用判斷總和(sum)是否大於0來與結果比較，時間複雜度為O(n)。
 ## 解題
 ```
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
 function maxSubArray(nums) {
     if (nums.length === 0) return 0;
     let result = nums[0];
