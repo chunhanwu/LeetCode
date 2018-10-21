@@ -20,39 +20,21 @@ Output: 5
 注意:單字的定義為一串沒有空白字元的序列組成。 
 
 ## 思路
-
-
+使用split並利用正規表示法以`' '`將字串隔開，並判斷最後一個陣列內容的長度(0表示`' '`)，若0表示字串內容最後為空白，則需取倒數第二個，即最後一個單字。
 ## 解題
 ```
-function isValid(s) {
-    if (s.length === 0) {
-        return true;
+/**
+ * @param {string} s
+ * @return {number}
+ */
+
+function lengthOfLastWord(s) {
+    let arr = s.split(/\s+/)
+    let res = arr[arr.length - 1].length
+    if (res === 0) {
+        res = arr[arr.length - 2].length
     }
-    let stack = [];
-    let match = {
-        ')':'(',
-        ']':'[',
-        '}':'{'
-    }
-    for (let i in s){
-        switch (s[i]) {
-            case '(':
-            case '[':
-            case '{':
-                stack.push(s[i])
-            break
-            case ')':
-            case ']':
-            case '}':
-                if(match[s[i]] === stack[stack.length-1]){
-                    stack.pop();
-                } else {
-                    return false
-                }
-            break
-        }
-    }
-    return stack.length === 0
+    return res;
 };
 ```
 [回到首頁](../../README.md)  

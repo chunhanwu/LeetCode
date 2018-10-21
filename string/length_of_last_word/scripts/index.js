@@ -4,10 +4,14 @@
  */
 
 function lengthOfLastWord(s) {
-    console.warn('s', s)
-    return 0
+    let arr = s.split(/\s+/)
+    let res = arr[arr.length - 1].length
+    if (res === 0) {
+        res = arr[arr.length - 2].length
+    }
+    return res;
 };
 
 
 console.warn('input', 'Hello World');
-console.warn('output', lengthOfLastWord('Hello World'));
+console.warn('output', lengthOfLastWord('Hello World! '));
