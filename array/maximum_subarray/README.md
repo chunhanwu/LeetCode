@@ -18,11 +18,22 @@ If you have figured out the O(n) solution, try coding another solution using the
 
 如果寫好複雜度為O(n)的解了，試著用divide and conquer寫寫看。
 
-
 ## 思路
-
+最簡單的想法就是[0] ~ [0]、[0] ~ [1] ... [0] ~ [N] ... [N] ~ [N]全部計算一下就可以了，在此不另行撰寫我。  
+這邊利用判斷總和是否為0來比較結果，時間複雜度為O(n)。
 ## 解題
 ```
+function maxSubArray(nums) {
+    if (nums.length === 0) return 0;
+    let result = nums[0];
+    let sum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+        result = Math.max(sum, result);
+        sum = sum < 0 ? 0 : sum;
+    }
+    return result;
+};
 ```
 
 [回到首頁](../../README.md)  
