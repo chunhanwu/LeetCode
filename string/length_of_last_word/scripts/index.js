@@ -13,5 +13,5 @@ function lengthOfLastWord(s) {
 };
 
 
-console.warn('input', 'Hello World');
+console.warn('input', 'Hello World!');
 console.warn('output', lengthOfLastWord('Hello World! '));
