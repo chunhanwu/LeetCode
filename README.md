@@ -4,12 +4,12 @@
 * [LeetCode 26. Remove Duplicates from Sorted Array](array/remove_duplicates_from_sorted_array) 
 * [LeetCode 27. Remove Element](array/remove_element/README.md)  
 * [LeetCode 35. Search Insert Position](array/search_insert_position/README.md)  
-* [LeetCode 53. Maximum Subarray](array/maximum_subarray/README.md) 
+* [LeetCode 53. Maximum Subarray](array/maximum_subarray/README.md)
+* 待討論[LeetCode 66. Plus One](array/plus_one/README.md) 
 
 數學Number
 * [LeetCode 7. Reverse Integer](number/reverse_integer/README.md)  
 * [LeetCode 9. Palindrome Number](number/palindrome_number/README.md)   
-* 待討論[LeetCode 66. Plus One](number/plus_one/README.md)
 * 待討論[LeetCode 69. Sqrt(x)](number/sqrt(x)/README.md)    
 
 字串String
