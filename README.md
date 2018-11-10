@@ -22,6 +22,7 @@
 
 連結串列Linked List
 * [LeetCode 21. Merge Two Sorted Lists](linked_list/merge_two_sorted_lists/README.md)  
+* 待討論[LeetCode 83. Remove Duplicates from Sorted List](linked_list/remove_duplicates_from_sorted_list/README.md)  
 
 動態規劃Dynamic Programming
 * 待討論[LeetCode 70. Climbing Stairs](dynamic_programming/climbing_stairs/README.md)  
