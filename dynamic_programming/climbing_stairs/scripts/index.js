@@ -11,8 +11,8 @@ function climbStairs(n) {
 
     for (let i = 1; i < n; i++) {
         result = fn_1 + fn_2    // f(n) = f(n-1) + f(n-2)
-        fn_2 = fn_1             // f(n-1) = f(n-2) 
-        fn_1 = result           // f(n-1) = f(n)
+        fn_2 = fn_1             // f(n-2) = f(n-1)  更新下一次的計算
+        fn_1 = result           // f(n-1) = f(n)    更新下一次的計算
     }
     return result
 };
