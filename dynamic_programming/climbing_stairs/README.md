@@ -37,7 +37,9 @@ Explanation: There are three ways to climb to the top.
 1. n = 2, result = 1+1 (爬1階兩次 + 一次爬兩階)
 1. n = 3, result = 1+2 (前面兩個case相加)
 1. n = 4, result = 3+2 (前面兩個case相加)
-1. f(n) = f(n-1) + f(n-2)
+1. f(n) = f(n-1) + f(n-2)  
+
+在解題中可利用遞迴`return climbStairs(n - 1) + climbStairs(n - 2)`即可，但我不想重複計算，也不想多用一個陣列，即`arr[n] = arr[n-1] + arr[n-2]`，所以用了以下方式。
 
 ## 解題
 ```
