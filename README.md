@@ -24,4 +24,4 @@
 * [LeetCode 21. Merge Two Sorted Lists](linked_list/merge_two_sorted_lists/README.md)  
 
 動態規劃Dynamic Programming
-* [LeetCode 70. Climbing Stairs](dynamic_programming/climbing_stairs/README.md)  
+* 待討論[LeetCode 70. Climbing Stairs](dynamic_programming/climbing_stairs/README.md)  

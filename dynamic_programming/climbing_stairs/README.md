@@ -33,9 +33,29 @@ Explanation: There are three ways to climb to the top.
 提醒: n為正整數
 
 ## 思路
+1. n = 1， result = 1
+1. n = 2, result = 1+1 (爬1階兩次 + 一次爬兩階)
+1. n = 3, result = 1+2 (前面兩個case相加)
+1. n = 4, result = 3+2 (前面兩個case相加)
+1. f(n) = f(n-1) + f(n-2)
 
 ## 解題
+```
+function climbStairs(n) {
+    // if (n === 0) return 0
+    // if (n === 1) return 1
+    // if (n === 2) return 2
+    // return climbStairs(n - 1) + climbStairs(n - 2)
+    let result = 0, fn_1 = 1, fn_2 = 0
 
+    for (let i = 1; i < n; i++) {
+        result = fn_1 + fn_2    // f(n) = f(n-1) + f(n-2)
+        fn_2 = fn_1             // f(n-1) = f(n-2) 
+        fn_1 = result           // f(n-1) = f(n)
+    }
+    return result
+};
+```
 
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
