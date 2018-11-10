@@ -31,9 +31,28 @@ Explanation: The array represents the integer 4321.
 
 ## 思路
 
+從陣列最後一個位數開始，該數+1，判斷是否大於10，表示進位，若進位則處理10位數(倒數第二個)。  
 
+最後在判斷第一個數字是否為0，為0則表示進位。
 
 ## 解題
+
+```
+function plusOne(digits) {
+    // 從最後一個位數開始，該數+1
+    // 若大於10表示進位，若小於則跳出  
+    for (let i = digits.length - 1; i >= 0; i--) {
+        digits[i]++;
+        if (digits[i] < 10) {
+            break;
+        }
+        digits[i] -= 10;
+    }
+    // 若第一位為0 則表示需多一個位數
+    digits[0] === 0 && digits.unshift(1);
+    return digits
+};
+```
 
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
