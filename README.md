@@ -9,7 +9,8 @@
 數學Number
 * [LeetCode 7. Reverse Integer](number/reverse_integer/README.md)  
 * [LeetCode 9. Palindrome Number](number/palindrome_number/README.md)   
-* [LeetCode 66. Plus One](number/plus_one/README.md)   
+* 待討論[LeetCode 66. Plus One](number/plus_one/README.md)
+* 待討論[LeetCode 69. Sqrt(x)](number/sqrt(x)/README.md)    
 
 字串String
 * [LeetCode 13. Roman to Integer](string/roman_to_Integer/README.md)
