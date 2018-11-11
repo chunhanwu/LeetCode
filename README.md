@@ -6,6 +6,7 @@
 * [LeetCode 35. Search Insert Position](array/search_insert_position/README.md)  
 * [LeetCode 53. Maximum Subarray](array/maximum_subarray/README.md)
 * 待討論[LeetCode 66. Plus One](array/plus_one/README.md) 
+* 待討論[LeetCode 88. Merge Sorted Array](array/merge_sorted_array/README.md) 
 
 數學Number
 * [LeetCode 7. Reverse Integer](number/reverse_integer/README.md)  
