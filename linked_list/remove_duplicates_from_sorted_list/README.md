@@ -18,7 +18,25 @@ Output: 1->2->3
 給一個連結串列，刪除重複的節點
 
 ## 思路
-
+在開始前，我先舉個簡單例子以便閱讀程式碼，因為我自己也很容易搞混
+```
+let index1 = {'a':1,'b':2}
+let index2 = index1 // index2 = {'a':1,'b':2}
+index2.b = {'a':3,'b':4}
+// index1 = {'a':1,'b':{'a':3,'b':4} }
+// index2 = {'a':1,'b':{'a':3,'b':4} }
+index2 = index2.b
+// index1 = {'a':1,'b':{'a':3,'b':4} }
+// index2 = {'a':3,'b':4}
+index2.b = { 'a': 5, 'b': 6 }
+// index1 = {'a':1,'b':{'a':3,'b':{'a':5,'b':6}} }
+// index2 = {'a':3,'b':{ 'a': 5, 'b': 6 }}
+index2 = index2.b
+// index1 = {'a':1,'b':{'a':3,'b':{'a':5,'b':6}} }
+// index2 = { 'a': 5, 'b': 6 }
+```
+希望以上例子可以方便閱讀者方便理解，理解後應該就很簡單解題了，只有判斷該node上的val是否與head.val相等就可以了。  
+本題許多程式碼與[LeetCode 21. Merge Two Sorted Lists](../merge_two_sorted_lists/README.md) 相同，如果理解僅需閱讀`deleteDuplicates`即可。
 ## 解題
 首先先定義node內容，在這邊leetcode上已定義
 ```
@@ -41,30 +59,21 @@ function buildList(nodes) {
 ```
 排列成新的連結串列
 ```
-function mergeTwoLists(l1, l2) {
+function deleteDuplicates(head) {
+    if (head === null || head.next === null) return head;
     let result = new ListNode(null);
     // 目前Node位置
     let currentNode = result;
-
-    while (l1 && l2) {
-        // l1,l2較小的數加入result
-        if (l1.val < l2.val) {
-            currentNode.next = l1;
-            l1 = l1.next;
-        } else {
-            currentNode.next = l2;
-            l2 = l2.next
+    while (head) {
+        if (head.val !== currentNode.val) {
+            currentNode.next = head;
+            currentNode = currentNode.next
         }
-        currentNode = currentNode.next;
+        head = head.next;
     }
-
-    //將l1,l2剩下的Node加到result
-    if (l1 !== null) {
-        currentNode.next = l1;
-    }
-    if (l2 !== null) {
-        currentNode.next = l2;
-    }
+    currentNode.next = null
+    let index1 = { 'a': 1, 'b': 2 }
+    let index2 = index1
     return result.next
 };
 ```
@@ -79,7 +88,7 @@ function convertArray(ListNode) {
     return arr
 }
 ```
-在leetcode上，只需撰寫mergeTwoLists即可，其他都是方便閱讀者閱讀。
+在leetcode上，只需撰寫deleteDuplicates即可，其他都是方便閱讀者閱讀。
 
 [回到首頁](../../README.md)  
 [程式碼參考](scripts/index.js)
