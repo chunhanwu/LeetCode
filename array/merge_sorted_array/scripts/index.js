@@ -8,7 +8,7 @@
 
 function merge(nums1, m, nums2, n) {
 
-    return 0
+    console.warn('nums1', nums1)
 };
 
 let input_nums1 = [1, 2, 3, 0, 0, 0];
@@ -19,4 +19,4 @@ console.warn('input_nums1', input_nums1);
 console.warn('input_nums1', input_nums2);
 console.warn('input_m', input_m);
 console.warn('input_n', input_n);
-console.warn('output', merge(input_nums1, input_nums2, input_m, input_n));
+merge(input_nums1, input_nums2, input_m, input_n)
