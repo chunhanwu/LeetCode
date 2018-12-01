@@ -5,13 +5,13 @@
 * [LeetCode 27. Remove Element](array/remove_element/README.md)  
 * [LeetCode 35. Search Insert Position](array/search_insert_position/README.md)  
 * [LeetCode 53. Maximum Subarray](array/maximum_subarray/README.md)
-* 待討論[LeetCode 66. Plus One](array/plus_one/README.md) 
-* 待討論[LeetCode 88. Merge Sorted Array](array/merge_sorted_array/README.md) 
+* [LeetCode 66. Plus One](array/plus_one/README.md) 
+* [LeetCode 88. Merge Sorted Array](array/merge_sorted_array/README.md) 
 
 數學Number
 * [LeetCode 7. Reverse Integer](number/reverse_integer/README.md)  
 * [LeetCode 9. Palindrome Number](number/palindrome_number/README.md)   
-* 待討論[LeetCode 69. Sqrt(x)](number/sqrt(x)/README.md)    
+* [LeetCode 69. Sqrt(x)](number/sqrt(x)/README.md)    
 
 字串String
 * [LeetCode 13. Roman to Integer](string/roman_to_Integer/README.md)
@@ -23,7 +23,10 @@
 
 連結串列Linked List
 * [LeetCode 21. Merge Two Sorted Lists](linked_list/merge_two_sorted_lists/README.md)  
-* 待討論[LeetCode 83. Remove Duplicates from Sorted List](linked_list/remove_duplicates_from_sorted_list/README.md)  
+* [LeetCode 83. Remove Duplicates from Sorted List](linked_list/remove_duplicates_from_sorted_list/README.md)  
 
 動態規劃Dynamic Programming
-* 待討論[LeetCode 70. Climbing Stairs](dynamic_programming/climbing_stairs/README.md)  
+* [LeetCode 70. Climbing Stairs](dynamic_programming/climbing_stairs/README.md)  
+
+二元樹Binary Tree
+* 待討論[LeetCode 70. Same Tree](binary_tree/same_tree/README.md)  
