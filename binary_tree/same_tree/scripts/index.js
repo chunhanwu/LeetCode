@@ -33,14 +33,25 @@ function buildTree(nodes) {
 
 
 function isSameTree(p, q) {
-    console.warn('p', p)
-    console.warn('q', q)
-    return 0
+    // 若是p和q為null表示已經比較完，節點內容完全相通
+    if (p === null && q === null) {
+        return true;
+    }
+    // 若是只有一方為null，表示內容不相同
+    if (p === null || q === null) {
+        return false;
+    }
+    // 比較節點上的值
+    if (p.val != q.val) {
+        return false;
+    }
+    // 表示節點上值相同，繼續比較二元樹的下一個左右的點。
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
 
-let input_p = [1, 2, 3]
+let input_p = [1, 2]
 let p_tree = buildTree(input_p)
-let input_q = [1, 4, 3]
+let input_q = [1, null, 2]
 let q_tree = buildTree(input_q)
 console.warn('input_p', input_p);
 console.warn('p_tree', p_tree);
