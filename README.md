@@ -29,4 +29,4 @@
 * [LeetCode 70. Climbing Stairs](dynamic_programming/climbing_stairs/README.md)  
 
 二元樹Binary Tree
-* 待討論[LeetCode 100. Same Tree](binary_tree/same_tree/README.md)  
+* [LeetCode 100. Same Tree](binary_tree/same_tree/README.md)  
